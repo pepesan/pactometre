@@ -81,12 +81,89 @@ resultados=[ciudadanos,juntspercat,esquerra,psc, comunes, cup, pp];
     // console.log();
 }
 
+function muestraGrafica(){
+    // Create the chart
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Resultados elecciones Cataluña 2017'
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Porcentajes de votos'
+        }
 
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+    },
+
+    series: [{
+        name: 'Partidos',
+        colorByPoint: true,
+        data: [{
+            name: 'Ciudadanos',
+            y: 25.37,
+            color:'orange'
+           
+        }, {
+            name: 'JuntsxCat',
+            y: 21.65,
+            color:'pink'
+           
+        }, {
+            name: 'ERC',
+            y: 21.39,
+            color:'brown'
+           
+        },{ 
+            name: 'PSC',
+            y: 13.88,
+            color:'red'
+           
+        }, {
+            name: 'CatComu-Podem',
+            y: 7.45,
+            color:'purple'
+           
+        }, {
+            name: 'CUP',
+            y: 4.45,
+            color:'yellow'
+           
+        }, {
+            name: 'PP',
+            y: 4.24,
+            color:'cyan'
+           
+        }]
+    }],
+});
+}
 //imprimeDatos();
 //Cambiar el comportamiento del botón para que cuando lo pulsen ejecute una función que yo le diga
 document.getElementById("miboton")
     .addEventListener("click",imprimeDatos);
-
+muestraGrafica();
 
 /*
 [
