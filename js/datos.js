@@ -41,6 +41,15 @@ var pp={
 };
 resultados=[ciudadanos,juntspercat,esquerra,psc, comunes, cup, pp];
 
+//document.getElementById("listado").innerHTML="<li>Ciudadanos: 37</li>";
+document.getElementById("listado").innerHTML="";
+document.getElementById("listado").innerHTML+="<li>"+resultados[0].nombre+": "+resultados[0].diputados+"</li>";
+document.getElementById("listado").innerHTML+="<li>"+resultados[1].nombre+": "+resultados[1].diputados+"</li>";
+document.getElementById("listado").innerHTML+="<li>"+resultados[2].nombre+": "+resultados[2].diputados+"</li>";
+document.getElementById("listado").innerHTML+="<li>"+resultados[3].nombre+": "+resultados[3].diputados+"</li>";
+document.getElementById("listado").innerHTML+="<li>"+resultados[4].nombre+": "+resultados[4].diputados+"</li>";
+document.getElementById("listado").innerHTML+="<li>"+resultados[5].nombre+": "+resultados[5].diputados+"</li>";
+document.getElementById("listado").innerHTML+="<li>"+resultados[6].nombre+": "+resultados[6].diputados+"</li>";
 
 /*
 [
