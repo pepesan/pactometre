@@ -21,7 +21,7 @@ resultados=[ciudadanos,juntspercat];
 var esquerra={
     nombre:"Esquerra Republicana de Catalunya",
     diputados:32,
-    color:"#FDB94D"
+    color:"brown"
 };
 resultados=[ciudadanos,juntspercat,esquerra];
 
@@ -75,7 +75,8 @@ resultados=[ciudadanos,juntspercat,esquerra,psc, comunes, cup, pp];
     document.getElementById("listado").innerHTML+="<li>"+resultados[?].nombre+": "+resultados[?].diputados+"</li>";
     */
     for(indice in resultados){
-        document.getElementById("listado").innerHTML+="<li>"+resultados[indice].nombre+": "+resultados[indice].diputados+"</li>";
+       var partido= resultados[indice];
+        document.getElementById("listado").innerHTML+="<li class='"+partido.color+"'>"+partido.nombre+": "+partido.diputados+"</li>";
     }
     // console.log();
 }
